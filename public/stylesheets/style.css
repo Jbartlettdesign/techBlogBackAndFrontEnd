@@ -1,0 +1,95 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --darkBrown: #231010; 
+    --mint:#d9ead3;
+    --backgroundGrey:#b6bbb3;
+    --titleWordsGrey: #6e6767;
+}
+main{
+    display: flex;
+justify-content: center;
+}
+a {
+text-decoration: none;
+color: var(--mint);
+}
+header{
+    background-color: var(--darkBrown);
+    
+    padding: 15px;
+    height: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    width: 190px;
+    font-size: 10px;
+}
+body {
+    background-color: var(--mint); 
+    margin: 0;
+}
+html{
+    height: 100%;
+    border: white solid 10px;
+   
+}
+.post-list{
+width: 93%;
+list-style: none;
+
+
+}
+ul{
+    padding: 0px;
+}
+.post-item{
+    border: var(--darkBrown) solid 2px;
+    margin-bottom: 20px;
+}
+
+.title{
+    color: var(--mint);
+    background-color: var(--darkBrown);
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 5px;
+    margin-top: -1px;
+
+}
+.title a{
+    font-size: 15px;
+}
+.userInfo{
+    margin: 0px;
+    font-size: 9px;
+    margin-top: 4px;
+}
+.techBlog {
+    font-size: 20px;
+    color: var(--darkBrown);
+    background-color: var(--mint);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px var(--backgroundGrey);
+}
+.techBlogDiv{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+}
+.content{
+    height: auto;
+}
+.content p{
+    font-size: 11px;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 12px;
+}
