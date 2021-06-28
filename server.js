@@ -13,10 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 ///////////////////////////////////////
 //connetcion to sequelize
 
-//////////////////////////////////////
-
-/////////////////////////////////////
-/*const session = require('express-session');
+const session = require('express-session');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
@@ -28,7 +25,7 @@ const sess = {
         db:sequelize
     })
 };
-app.use(session(sess));*/
+app.use(session(sess));
 /////////////////////////////////
 app.use(routes);
 ////////////////////////////////

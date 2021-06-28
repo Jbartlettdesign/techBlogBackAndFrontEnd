@@ -11,9 +11,14 @@
 <body>
     <header>
         <nav>
-            <a href="">Home</a>
-            <a href="">Dashboard</a>
-            <a href="">Logout</a>
+            <a href="/">Home</a>
+            {{#if loggedIn}}
+            <a href="/dashboard">Dashboard</a>
+            
+            <a href="/api/users/logout">Logout</a>
+            {{else}}
+            <a href="/login">Log In</a>
+            {{/if}}
         </nav>
         <div class = techBlogDiv>
             <a class = "techBlog"  href="">The Tech Blog</a>
