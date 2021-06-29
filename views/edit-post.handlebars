@@ -1,0 +1,21 @@
+
+<article class = 'editPost'>
+    <div class = "edit">
+        <p class = "userInfo">Edit Post</p>
+    </div>
+    <form class = "content">
+            <label class = "label" for="">Title</label>
+            <br>
+            <input type="text" id="title" value="{{post.title}}">
+            <br>
+            <label class = "label"for="">Content</label>
+            <br>
+            <input type="text" id="content" value="{{post.content}}">
+            <div class = "btn">
+              <button id = "update" class = "deleteUpdateBtn" type = "click">Update Post</button>
+              <button id = "delete" class = "deleteUpdateBtn" type = "click">Delete</button>
+            </div>
+    </form>    
+</article>
+<script src = "/javascript/update.js"></script>
+<script src = "/javascript/delete.js"></script>

@@ -39,7 +39,7 @@ body {
     margin: 0;
 }
 html{
-    height: 100%;
+    height: auto;
     border: white solid 10px;
    
 }
@@ -92,6 +92,7 @@ ul{
         margin-bottom: 10px;
         margin-left: 15px;
 }
+
 .content{
     height: auto;
 }
@@ -221,3 +222,122 @@ margin-left: 5px;
     font-size: 11px;
     margin-right: 5px;
 }
+/**********************************************/
+.editPost{
+    margin-top: 20px;
+    border: var(--darkBrown) solid 2px;
+    font-size: 13px;
+    width: 93%;
+}
+.edit{
+    
+    background-color: var(--darkBrown);
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 5px;
+    margin: -1px;
+
+}
+.edit p{
+    color: var(--mint);
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+}
+.content{
+    height: auto;
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+.content input{
+    font-size: 11px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    height: auto;
+    width:95%;
+    margin-top:5px;
+    overflow: visible;
+}
+.label{
+    margin-left: 15px;
+}
+.deleteUpdateBtn {
+    background-color: var(--backgroundGrey);
+    color: var(--titleWordsGrey);
+    border: none;
+    border-radius: 5px;
+    width: 96%;
+    font-size: 12px;
+    height: 25px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.btn{
+    margin-top: 15px;
+}
+/***************************************************/
+.comment-list{
+    width: 100%;
+    list-style: none;
+    display: block;
+    
+    }
+    .commentTitle{
+        height: 12px;
+        color: var(--mint);
+        background-color: var(--darkBrown);
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-top: -1px;
+    }
+    .commentContent p{
+        font-size: 11px;
+        padding: 5px;
+        margin: 5px;
+        margin-left: 10px;
+        
+    }
+    .commentContent{
+        height: auto;
+        margin-bottom: 16px;
+        margin-top: 18px;
+    }
+    .commentContent input{
+        font-size: 11px;
+        padding: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        padding-bottom: 40px;
+        width:95%;
+        margin-top:5px;
+        overflow: visible;
+      
+   
+    }
+    .comment-list button{
+        margin-top: 7px;
+        background-color:var(--backgroundGrey);
+        height: 25px;
+        border: none;
+        border-radius: 5px;
+        width: 97%;
+        color: var(--titleWordsGrey);
+        font-size: 12px;
+        margin-bottom: 10px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }

@@ -18,8 +18,8 @@ async function logInFormHandler(event){
         }
         else{
             alert(response.statusText);
-        }
+        };
 
-    }
-}
+    };
+};
 document.querySelector('.logInForm').addEventListener('submit', logInFormHandler);

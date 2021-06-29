@@ -8,7 +8,10 @@ router.get('/', (req, res) => {
             'id',
             'user_id',
             'post_id',
-            'comment_text'
+            'comment_text',
+            'createdAt'
+            
+            
         ],
     }).then(dbCommentData => res.json(dbCommentData))
     .catch(err => {
