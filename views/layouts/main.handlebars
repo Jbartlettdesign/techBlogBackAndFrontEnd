@@ -15,18 +15,18 @@
             {{#if loggedIn}}
             <a href="/dashboard">Dashboard</a>
             
-            <a href="/api/users/logout">Logout</a>
+            <a href="" id = "logout">Logout</a>
             {{else}}
             <a href="/login">Log In</a>
             {{/if}}
         </nav>
-        <div class = techBlogDiv>
-            <a class = "techBlog"  href="">The Tech Blog</a>
-        </div>
+       
     </header>
     <main>
         {{{body}}}
     </main>
-    
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 </html>

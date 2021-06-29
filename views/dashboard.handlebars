@@ -1,7 +1,18 @@
+ 
+ <div class = "techBlogDiv">
+            <a id = "changeAble" class = "techBlog">Your DashBoard</a>
+ </div>
+ <div class = "master">
+<div class = "dash">
 <ul class="post-list">
+
 {{#each posts as |post|}}
 <li>
     {{> dashboard-post-info post}}
 </li>
 {{/each}}
 </ul>
+
+<a href="/new-post" class = "createBtn">+ New Post</a>
+</div>
+</div>

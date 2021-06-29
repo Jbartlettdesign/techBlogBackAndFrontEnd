@@ -10,16 +10,19 @@ async function logInFormHandler(event){
                 username,
                 password
             }),
-            headers:{'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' }
         });
         if(response.ok){
             console.log('success');
-            document.location.replace('/dashboard');
+            document.location.replace('/');
+           
         }
         else{
             alert(response.statusText);
         };
-
+        
     };
+    
 };
+
 document.querySelector('.logInForm').addEventListener('submit', logInFormHandler);

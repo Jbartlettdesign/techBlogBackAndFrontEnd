@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const { ESRCH } = require('constants');
 const session = require('express-session');
 const sequelize = require('../config/connection');
 const {Post, User, Comment} = require('../models');
+ 
 
-router.get('/', (req, res) => {
+ router.get('/', (req, res) => {
     Post.findAll({
+
     attributes:[
         'id',
         'title',
@@ -22,6 +23,7 @@ router.get('/', (req, res) => {
         const posts = dbPostData.map(post => post.get({plain: true}));
         res.render('homepage', {posts,
             loggedIn: req.session.loggedIn});
+            
     })
     .catch(err => {
         console.log(err);
@@ -62,6 +64,9 @@ router.get('/login', (req, res) => {
 });
 router.get('/signup', (req, res) => {
     res.render('signup');
+});
+router.get('/new-post', (req, res) => {
+    res.render('new-post');
 })
 ////////////////////////////////////////////
 router.get('/post/edit/:id', (req, res) => {

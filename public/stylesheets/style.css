@@ -8,10 +8,7 @@
     --backgroundGrey:#646363;
     --titleWordsGrey: #d8cbcb;
 }
-main{
-    display: flex;
-justify-content: center;
-}
+
 a {
 text-decoration: none;
 color: var(--mint);
@@ -39,6 +36,7 @@ body {
     margin: 0;
 }
 html{
+    min-height: 100%;
     height: auto;
     border: white solid 10px;
    
@@ -46,7 +44,8 @@ html{
 .post-list{
 width: 93%;
 list-style: none;
-
+margin-left: auto;
+margin-right: auto;
 
 }
 ul{
@@ -84,13 +83,22 @@ ul{
     background-color: var(--mint);
     font-weight: bold;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 3px 3px grey;
+    margin-left: 30px;
+    
+  
 }
 .techBlogDiv{
-        margin-top: 20px;
+        display: block;
         margin-bottom: 10px;
-        margin-left: 15px;
+        height: 45px;
+        background-color: var(--darkBrown);
+        padding-top: 5px;
+
+        
+      
+       
 }
 
 .content{
@@ -109,12 +117,16 @@ ul{
     width: 93%;
     list-style: none;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logInForm{
     border: var(--darkBrown) solid 2px;
     width: 93%;
     list-style: none;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .signUpForm button{
@@ -228,6 +240,8 @@ margin-left: 5px;
     border: var(--darkBrown) solid 2px;
     font-size: 13px;
     width: 93%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .edit{
     
@@ -341,3 +355,35 @@ margin-left: 5px;
         margin-right: auto;
         display: block;
     }
+    /*****************************************************/
+    .dash{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        align-items: center;
+        height: 100%;
+        clear: both;
+    }
+    .createBtn{
+        background-color: var(--darkBrown);
+        color:var(--titleWordsGrey);
+        border: none;
+        border-radius: 10px;
+        padding: 6px;
+        padding-right: 10px;
+        font-size: 15px;
+        
+    }
+    /**********************************************/
+    .newPost{
+        margin-top: 20px;
+        border: var(--darkBrown) solid 2px;
+        font-size: 13px;
+        width: 93%;
+        margin-bottom: 20px;
+    }
+    .master{
+    display: flex;
+justify-content: center;
+}

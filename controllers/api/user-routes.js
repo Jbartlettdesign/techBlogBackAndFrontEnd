@@ -41,7 +41,6 @@ router.post('/login', (req, res) => {
 })
 .then(dbUserData => {
     if(!dbUserData){
-        console.log(err);
         res.status(400).json({message:'No user with that username!'});
         return;
     }
@@ -55,18 +54,23 @@ router.post('/login', (req, res) => {
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
 
-        res.json({user: dbUserData, message: 'You are now logged in!'})
+        res.json({user: dbUserData, message: 'You are now logged in!'});
+        
         });
+        
     });
 });
 router.post('/logout', (req, res) => {
     if(req.session.loggedIn){
+        console.log('logged in');
         req.session.destroy(() => {
-            req.status(204).end();
+            res.status(204).end();
+           
         });
     }
     else{
-        res.status(404).end();
+        //res.status(404).end();
+        console.log('not logged in');
     }
 });
 module.exports = router;
