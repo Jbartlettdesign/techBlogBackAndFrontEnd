@@ -1,6 +1,6 @@
 async function logInFormHandler(event){
     event.preventDefault();
-    console.log('button pushed')
+    //console.log('button pushed')
     const username = document.querySelector("#usernameL").value.trim();
     const password = document.querySelector("#passwordL").value.trim();
     if(username && password){
@@ -13,9 +13,10 @@ async function logInFormHandler(event){
             headers: { 'Content-Type': 'application/json' }
         });
         if(response.ok){
-            console.log('success');
+            //console.log('success');
+            
             document.location.replace('/');
-           
+            
         }
         else{
             alert(response.statusText);

@@ -24,4 +24,5 @@ async function addCommentEventHandler(event){
         };
     };
 };
+
 document.getElementById('addComment').addEventListener('click', addCommentEventHandler);

@@ -1,3 +1,4 @@
+
 <div class = "techBlogDiv">
             <a id = "changeAble" class = "techBlog">The Tech Blog</a>
  </div>
@@ -16,7 +17,7 @@
 </article>
     </li>
    
-
+{{#if loggedIn}}
         <ul class="comment-list">
             
             <li class = "post-item">
@@ -32,8 +33,8 @@
             </li>
         
         </ul>
-
-
+{{/if}}
+        
         {{#each post.comments}}
         <ul class="comment-list">
             
@@ -52,6 +53,8 @@
         
         </ul>
         {{/each}}
-
+        
 </ul>
+{{#if loggedIn}}
 <script src="/javascript/add-comment.js"></script>
+{{/if }}
