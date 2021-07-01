@@ -27,3 +27,15 @@ async function logInFormHandler(event){
 };
 
 document.querySelector('.logInForm').addEventListener('submit', logInFormHandler);
+
+/*.then(function() {
+    document.location.replace("/");
+    
+    
+}).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
+
+};
+}*/

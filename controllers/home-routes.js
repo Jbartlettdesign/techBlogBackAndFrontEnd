@@ -39,7 +39,7 @@ const {Post, User, Comment} = require('../models');
 router.get('/dashboard', (req, res) => {
 Post.findAll({
     where:{
-        user_id:req.session.user_id
+        id:req.session.user_id
     },
     attributes:[
     'id',
