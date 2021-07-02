@@ -19,8 +19,8 @@ router.post('/', (req, res) => {
     }).then(dbUserData => {
         req.session.save(() => {
         
-            req.session.user_id = dbUserData.id;
-            req.session.username = dbUserData.username;
+            req.session.user_id = dbUserData.dataValues.id;
+            req.session.username = dbUserData.dataValues.username;
             req.session.loggedIn = true;
             
             console.log(req.session);
@@ -50,12 +50,12 @@ router.post('/login', (req, res) => {
         return;
     }
     req.session.save(()=> {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
+        req.session.user_id = dbUserData.dataValues.id;
+        req.session.username = dbUserData.dataValues.username;
         req.session.loggedIn = true;
 
         res.json({user: dbUserData, message: 'You are now logged in!'});
-        
+        console.log("logged in", dbUserData.dataValues)
         });
         
     });

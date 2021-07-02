@@ -6,7 +6,7 @@ const {Post, User, Comment} = require('../models');
 
  router.get('/', (req, res) => {
     
-    Post.findAll({
+Post.findAll({
         
     attributes:[
         'id',
@@ -37,6 +37,8 @@ const {Post, User, Comment} = require('../models');
 });
 ///////////////////////////////////
 router.get('/dashboard', (req, res) => {
+    console.log("hello from /dashboard");
+    console.log(req.session);
 Post.findAll({
     where:{
         id:req.session.user_id
@@ -58,9 +60,10 @@ Post.findAll({
     res.render('dashboard', {posts,
         loggedIn: req.session.loggedIn
     })
+    console.log({posts})
 })
     .catch(err => {
-        console.log(err);
+        console.log("test from /dashboard", err);
         res.status(500).json(err);
     });
 });
