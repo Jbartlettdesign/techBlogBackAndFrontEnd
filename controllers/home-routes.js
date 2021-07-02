@@ -41,7 +41,7 @@ router.get('/dashboard', (req, res) => {
     console.log(req.session);
 Post.findAll({
     where:{
-        id:req.session.user_id
+        user_id:req.session.user_id
     },
     attributes:[
     'id',
