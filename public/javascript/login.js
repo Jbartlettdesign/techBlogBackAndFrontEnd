@@ -1,3 +1,4 @@
+const { response } = require("express");
 
 async function logInFormHandler(event){
     event.preventDefault();
@@ -11,13 +12,20 @@ async function logInFormHandler(event){
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
-        }).then(function (){
+        });
+        if(response.ok){
+        
+        
+        
             
             document.location.replace('/dashboard');
+        }
+        else(
+            window.alert("no user found")
+        )
+     
             
-        }).catch(err => console.log(err)
-            
-        );
+        
         
         
     };
