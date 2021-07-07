@@ -49,7 +49,7 @@ router.post('/login', (req, res) => {
         res.status(400).json({message: 'Incorrect password!'});
         return;
     }
-    if(validPassword){
+    else if(validPassword){
     req.session.save(()=> {
         req.session.user_id = dbUserData.dataValues.id;
         req.session.username = dbUserData.dataValues.username;
