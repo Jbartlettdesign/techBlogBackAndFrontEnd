@@ -5,21 +5,25 @@ async function logInFormHandler(event){
     const username = document.querySelector("#usernameL").value.trim();
     const password = document.querySelector("#passwordL").value.trim();
     if(password && username){
-     fetch('/api/users/login', {
+    const response = fetch('/api/users/login', {
             method: 'POST',
             body:JSON.stringify({
                 username,
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
-        }).then(function (){
+        });
+        if(response.ok){
             
             document.location.replace('/dashboard');
+        }
+        else{
+            document.location.replace('/login');
+        }
+        }
             
-        }).catch(err => console.log(err)
-            
-        );   
-    }
+         
+    
     };
     
 
