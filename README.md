@@ -1,5 +1,5 @@
 # techBlogBackAndFrontEnd
-This application is a CMS-style blog site where users can sign up and post their views. They can also view all other post in the home view. This app follows the MVP structure, with express-handlebars as the views, Sequelize and Myseql2 as the model, and Express as the controllers. It also uses express-session for authentication and bcrypt for password hashing.
+This application is a CMS-style blog site where users can sign up and post their views. They can also view all other posts in the home view. This app follows the MVP structure, with express-handlebars as the views, Sequelize and Myseql2 as the model, and Express as the controllers. It also uses express-session for authentication and bcrypt for password hashing.
 
 https://francophone-minister-90037.herokuapp.com/
 
