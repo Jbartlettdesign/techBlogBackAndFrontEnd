@@ -1,33 +1,26 @@
-const { response } = require("express");
 
 async function logInFormHandler(event){
     event.preventDefault();
     //console.log('button pushed')
     const username = document.querySelector("#usernameL").value.trim();
     const password = document.querySelector("#passwordL").value.trim();
-    const response = fetch('/api/users/login', {
+    if(password && username){
+     fetch('/api/users/login', {
             method: 'POST',
             body:JSON.stringify({
                 username,
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
-        });
-        if(response.ok){
-        
-        
-        
+        }).then(function (){
             
             document.location.replace('/dashboard');
-        }
-        else(
-            window.alert("no user found")
-        )
-     
             
+        }).catch(err => console.log(err)
+            
+        );
         
-        
-        
+    }
     };
     
 
