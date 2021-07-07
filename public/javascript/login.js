@@ -18,8 +18,7 @@ async function logInFormHandler(event){
             
         }).catch(err => console.log(err)
             
-        );
-        
+        );   
     }
     };
     
