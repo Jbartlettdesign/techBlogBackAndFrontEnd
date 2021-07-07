@@ -5,7 +5,7 @@ async function logInFormHandler(event){
     //console.log('button pushed')
     const username = document.querySelector("#usernameL").value.trim();
     const password = document.querySelector("#passwordL").value.trim();
-     fetch('/api/users/login', {
+    const response = fetch('/api/users/login', {
             method: 'POST',
             body:JSON.stringify({
                 username,
